@@ -1,0 +1,12 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c
+rockchip/rk_mpi.h
+-
+

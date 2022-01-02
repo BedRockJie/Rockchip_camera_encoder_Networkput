@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/Bedrock_encoder.dir/main.c.o  -o Bedrock_encoder  -Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build: libbedrock_lib.so 

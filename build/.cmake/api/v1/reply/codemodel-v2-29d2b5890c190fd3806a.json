@@ -1,0 +1,96 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.0"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						2
+					]
+				},
+				{
+					"build" : "encoder",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.0"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "encoder",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "Bedrock_encoder",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Bedrock_encoder::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Bedrock_encoder-Debug-890098e20d4440fc7162.json",
+					"name" : "Bedrock_encoder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "bedrock_encoder::@372742a3ab0a8675e45e",
+					"jsonFile" : "target-bedrock_encoder-Debug-798daa945d41e521b8da.json",
+					"name" : "bedrock_encoder",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "bedrock_lib::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-bedrock_lib-Debug-c6c02ab8444771abdf9c.json",
+					"name" : "bedrock_lib",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build",
+		"source" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
