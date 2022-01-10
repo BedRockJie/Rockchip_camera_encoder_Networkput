@@ -57,30 +57,30 @@ include encoder/CMakeFiles/bedrock_encoder.dir/progress.make
 # Include the compile flags for this target's objects.
 include encoder/CMakeFiles/bedrock_encoder.dir/flags.make
 
-encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o: encoder/CMakeFiles/bedrock_encoder.dir/flags.make
-encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o: ../encoder/bedrock_mpi_enc.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o"
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o   -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c
+encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: encoder/CMakeFiles/bedrock_encoder.dir/flags.make
+encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/bedrock_mpi_enc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o"
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp
 
-encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.i"
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c > CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.i
+encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.i"
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp > CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.i
 
-encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.s"
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.s
+encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.s"
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.s
 
 # Object files for target bedrock_encoder
 bedrock_encoder_OBJECTS = \
-"CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o"
+"CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o"
 
 # External object files for target bedrock_encoder
 bedrock_encoder_EXTERNAL_OBJECTS =
 
-encoder/libbedrock_encoder.a: encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o
+encoder/libbedrock_encoder.a: encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o
 encoder/libbedrock_encoder.a: encoder/CMakeFiles/bedrock_encoder.dir/build.make
 encoder/libbedrock_encoder.a: encoder/CMakeFiles/bedrock_encoder.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libbedrock_encoder.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libbedrock_encoder.a"
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && $(CMAKE_COMMAND) -P CMakeFiles/bedrock_encoder.dir/cmake_clean_target.cmake
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/bedrock_encoder.dir/link.txt --verbose=$(VERBOSE)
 

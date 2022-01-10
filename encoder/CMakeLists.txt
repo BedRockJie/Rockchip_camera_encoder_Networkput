@@ -1,16 +1,17 @@
 #
 # add_library
 #
-include(FindPkgConfig)
-pkg_check_modules(ROCKCHIP_MPP REQUIRED rockchip_mpp)
 include_directories(inc)
+include_directories(${ROCKIT_INCLUDE})
 
-message(STATUS   ${ROCKCHIP_MPP})
+
+set(ROCKIT_DEP_COMMON_LIBS 
+    ${CMAKE_CURRENT_LIST_DIR}/../lib/rockit/lib/librockit.so)
 
 #静态库
 add_library(bedrock_encoder STATIC
-            bedrock_mpi_enc.c
+            bedrock_mpi_enc.cpp
             )
 
 
-target_link_libraries(bedrock_encoder ROCKCHIP_MPP)
+target_link_libraries(bedrock_encoder ROCKIT_DEP_COMMON_LIBS)

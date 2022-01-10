@@ -6,7 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c
+../encoder/inc/bedrock_enc.h
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
 rockchip/rk_mpi.h
 -
+
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c
+bedrock_enc.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_enc.h
 

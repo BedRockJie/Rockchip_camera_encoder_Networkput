@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "libbedrock_lib.so"
+			"path" : "Bedrock_encoder"
 		}
 	],
 	"backtrace" : 1,
@@ -10,8 +10,9 @@
 	{
 		"commands" : 
 		[
-			"add_library",
+			"add_executable",
 			"install",
+			"target_link_libraries",
 			"include_directories"
 		],
 		"files" : 
@@ -26,23 +27,29 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 15,
+				"line" : 26,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 29,
+				"line" : 31,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
+				"line" : 27,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 0,
 				"line" : 6,
 				"parent" : 0
 			},
 			{
-				"command" : 2,
+				"command" : 3,
 				"file" : 0,
 				"line" : 7,
 				"parent" : 0
@@ -55,46 +62,45 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -fPIC  "
-				}
-			],
-			"defines" : 
-			[
+					"fragment" : "-g  "
+				},
 				{
-					"define" : "bedrock_lib_EXPORTS"
+					"fragment" : "-std=gnu++11"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 3,
+					"backtrace" : 4,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 5,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc"
 				}
 			],
-			"language" : "C",
+			"language" : "CXX",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
-	"id" : "bedrock_lib::@6890427a1f51a3e7e1df",
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 3,
+			"id" : "bedrock_lib::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "Bedrock_encoder::@6890427a1f51a3e7e1df",
 	"install" : 
 	{
 		"destinations" : 
 		[
 			{
 				"backtrace" : 2,
-				"path" : "lib"
-			},
-			{
-				"backtrace" : 2,
-				"path" : "lib"
+				"path" : "bin"
 			}
 		],
 		"prefix" : 
@@ -107,14 +113,27 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "",
+				"fragment" : "-g",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-rdynamic",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "-Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "libbedrock_lib.so",
+				"role" : "libraries"
 			}
 		],
-		"language" : "C"
+		"language" : "CXX"
 	},
-	"name" : "bedrock_lib",
-	"nameOnDisk" : "libbedrock_lib.so",
+	"name" : "Bedrock_encoder",
+	"nameOnDisk" : "Bedrock_encoder",
 	"paths" : 
 	{
 		"build" : ".",
@@ -126,8 +145,7 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -136,15 +154,9 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "control/bedrock_control.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "test/debug_log_test.c",
+			"path" : "main.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "SHARED_LIBRARY"
+	"type" : "EXECUTABLE"
 }

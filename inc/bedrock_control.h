@@ -1,20 +1,21 @@
-/*
+/*** 
  * @Description: 
  * @Version: 2.0
  * @Autor: Bedrock
- * @Date: 2021-12-30 21:29:27
+ * @Date: 2022-01-10 18:01:58
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-01 10:48:26
+ * @LastEditTime: 2022-01-10 18:07:27
+ * @Author: Bedrock
+ * @FilePath: /bedrock_encoder/inc/bedrock_control.h
+ * @版权声明
  */
-
-#ifndef __BEDROCK_CONTROL_H_
-#define __BEDROCK_CONTROL_H_
-
-#define BEDROCK_DEBUG_LOG "/tmp/bedrock/bedrock_debug_log.log"
-
+#ifndef __BEDROCK_CONTROL_H__
+#define __BEDROCK_CONTROL_H__
 
 extern int enable_minilog;
 extern int bedrock_app_log_level;
+
+#define BEDROCK_DEBUG_LOG "/tmp/bedrock_log_debug"
 
 enum {
   LOG_ERROR,
@@ -23,4 +24,4 @@ enum {
   LOG_DEBUG
 };
 
-#endif /*__BEDROCK_CONTROL_H*/
+#endif // BEDROCK_CONTROL_H

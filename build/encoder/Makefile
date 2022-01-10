@@ -171,32 +171,32 @@ bedrock_encoder/fast:
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/build
 .PHONY : bedrock_encoder/fast
 
-bedrock_mpi_enc.o: bedrock_mpi_enc.c.o
+bedrock_mpi_enc.o: bedrock_mpi_enc.cpp.o
 
 .PHONY : bedrock_mpi_enc.o
 
 # target to build an object file
-bedrock_mpi_enc.c.o:
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o
-.PHONY : bedrock_mpi_enc.c.o
+bedrock_mpi_enc.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o
+.PHONY : bedrock_mpi_enc.cpp.o
 
-bedrock_mpi_enc.i: bedrock_mpi_enc.c.i
+bedrock_mpi_enc.i: bedrock_mpi_enc.cpp.i
 
 .PHONY : bedrock_mpi_enc.i
 
 # target to preprocess a source file
-bedrock_mpi_enc.c.i:
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.i
-.PHONY : bedrock_mpi_enc.c.i
+bedrock_mpi_enc.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.i
+.PHONY : bedrock_mpi_enc.cpp.i
 
-bedrock_mpi_enc.s: bedrock_mpi_enc.c.s
+bedrock_mpi_enc.s: bedrock_mpi_enc.cpp.s
 
 .PHONY : bedrock_mpi_enc.s
 
 # target to generate assembly for a file
-bedrock_mpi_enc.c.s:
-	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.s
-.PHONY : bedrock_mpi_enc.c.s
+bedrock_mpi_enc.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.s
+.PHONY : bedrock_mpi_enc.cpp.s
 
 # Help Target
 help:

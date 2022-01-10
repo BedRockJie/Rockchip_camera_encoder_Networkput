@@ -6,3 +6,21 @@
 
 #IncludeRegexTransform: 
 
+../inc/bedrock_control.h
+
+../inc/bedrock_log.h
+minilogger/log.h
+../inc/minilogger/log.h
+
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/debug_log_test.c
+bedrock_control.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/bedrock_control.h
+bedrock_log.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/bedrock_log.h
+stdio.h
+-
+unistd.h
+-
+stdlib.h
+-
+

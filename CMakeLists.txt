@@ -6,6 +6,9 @@ project(Bedrock_encoder)
 include_directories(inc)
 include_directories(encoder/inc)
 
+set(ROCKIT_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/lib/rockit/include)
+
+
 add_subdirectory(encoder)
 
 set(LIB_SOURCE
@@ -17,7 +20,7 @@ add_library(bedrock_lib SHARED ${LIB_SOURCE})
 set(BEDROCK_DEPENDENT_LIBS
     bedrock_lib)
 
-set(SOURCES main.c)
+set(SOURCES main.cpp)
 
 
 add_executable(${PROJECT_NAME} ${SOURCES})
@@ -27,5 +30,5 @@ target_link_libraries(${PROJECT_NAME} ${BEDROCK_DEPENDENT_LIBS})
 
 install(TARGETS Bedrock_encoder DESTINATION bin)
 install(TARGETS bedrock_lib DESTINATION lib)
-#install(FILES ./inc/bedrock_control.h DESTINATION include)
-install(DIRECTORY ./inc DESTINATION include FILES_MATCHING PATTERN "*.h")
+# install(FILES ./inc/bedrock_control.h DESTINATION include)
+# install(DIRECTORY ./inc DESTINATION include FILES_MATCHING PATTERN "*.h")

@@ -1627,7 +1627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "general;ROCKCHIP_MPP;"
+			"value" : "general;ROCKIT_DEP_COMMON_LIBS;"
 		},
 		{
 			"name" : "pkgcfg_lib_ROCKCHIP_MPP_rockchip_mpp",

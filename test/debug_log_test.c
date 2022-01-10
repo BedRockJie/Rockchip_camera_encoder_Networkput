@@ -38,6 +38,7 @@ void dlog_level_test()
  * @use: log打印等级调整
  */
 extern int bedrock_app_log_level;
+
 void adjust_log_level()
 {
     if (!access(BEDROCK_DEBUG_LOG, 0))

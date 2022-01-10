@@ -1,8 +1,8 @@
 [
 {
   "directory": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build",
-  "command": "/usr/bin/cc  -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc  -g   -o CMakeFiles/Bedrock_encoder.dir/main.c.o   -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/main.c",
-  "file": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/main.c"
+  "command": "/usr/bin/c++   -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc  -g   -std=gnu++11 -o CMakeFiles/Bedrock_encoder.dir/main.cpp.o -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/main.cpp",
+  "file": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/main.cpp"
 },
 {
   "directory": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build",
@@ -16,7 +16,7 @@
 },
 {
   "directory": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder",
-  "command": "/usr/bin/cc  -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc  -g   -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.c.o   -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c",
-  "file": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.c"
+  "command": "/usr/bin/c++   -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/rockit/include  -g   -std=gnu++11 -o CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o -c /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp",
+  "file": "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp"
 }
 ]

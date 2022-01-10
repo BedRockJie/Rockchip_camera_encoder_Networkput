@@ -1,9 +1,8 @@
 {
-	"archive" : {},
 	"artifacts" : 
 	[
 		{
-			"path" : "encoder/libbedrock_encoder.a"
+			"path" : "libbedrock_lib.so"
 		}
 	],
 	"backtrace" : 1,
@@ -12,11 +11,11 @@
 		"commands" : 
 		[
 			"add_library",
+			"install",
 			"include_directories"
 		],
 		"files" : 
 		[
-			"encoder/CMakeLists.txt",
 			"CMakeLists.txt"
 		],
 		"nodes" : 
@@ -27,23 +26,26 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 11,
+				"line" : 18,
 				"parent" : 0
 			},
 			{
-				"file" : 1
+				"command" : 1,
+				"file" : 0,
+				"line" : 32,
+				"parent" : 0
 			},
 			{
-				"command" : 1,
-				"file" : 1,
+				"command" : 2,
+				"file" : 0,
 				"line" : 6,
-				"parent" : 2
+				"parent" : 0
 			},
 			{
-				"command" : 1,
-				"file" : 1,
+				"command" : 2,
+				"file" : 0,
 				"line" : 7,
-				"parent" : 2
+				"parent" : 0
 			}
 		]
 	},
@@ -53,7 +55,13 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g  "
+					"fragment" : "-g -fPIC  "
+				}
+			],
+			"defines" : 
+			[
+				{
+					"define" : "bedrock_lib_EXPORTS"
 				}
 			],
 			"includes" : 
@@ -70,17 +78,47 @@
 			"language" : "C",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
-	"id" : "bedrock_encoder::@372742a3ab0a8675e45e",
-	"name" : "bedrock_encoder",
-	"nameOnDisk" : "libbedrock_encoder.a",
+	"id" : "bedrock_lib::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			},
+			{
+				"backtrace" : 2,
+				"path" : "lib"
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "",
+				"role" : "flags"
+			}
+		],
+		"language" : "C"
+	},
+	"name" : "bedrock_lib",
+	"nameOnDisk" : "libbedrock_lib.so",
 	"paths" : 
 	{
-		"build" : "encoder",
-		"source" : "encoder"
+		"build" : ".",
+		"source" : "."
 	},
 	"sourceGroups" : 
 	[
@@ -88,7 +126,8 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0
+				0,
+				1
 			]
 		}
 	],
@@ -97,9 +136,15 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "encoder/bedrock_mpi_enc.c",
+			"path" : "control/bedrock_control.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "test/debug_log_test.c",
 			"sourceGroupIndex" : 0
 		}
 	],
-	"type" : "STATIC_LIBRARY"
+	"type" : "SHARED_LIBRARY"
 }
