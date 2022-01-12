@@ -21,6 +21,7 @@
 // 函数注释
 "fileheader.cursorMode": {
 // 默认字段
+"brief":"",
 "description":"",
 "param":"",
 "return":"",
