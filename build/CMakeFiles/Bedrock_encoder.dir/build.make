@@ -80,6 +80,8 @@ Bedrock_encoder_EXTERNAL_OBJECTS =
 Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/main.cpp.o
 Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/build.make
 Bedrock_encoder: libbedrock_lib.so
+Bedrock_encoder: encoder/libbedrock_encoder.a
+Bedrock_encoder: ../encoder/../lib/rockit/lib/librockit.so
 Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Bedrock_encoder"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Bedrock_encoder.dir/link.txt --verbose=$(VERBOSE)

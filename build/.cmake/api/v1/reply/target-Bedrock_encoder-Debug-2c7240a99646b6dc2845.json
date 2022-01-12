@@ -27,19 +27,19 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 26,
+				"line" : 28,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 31,
+				"line" : 33,
 				"parent" : 0
 			},
 			{
 				"command" : 2,
 				"file" : 0,
-				"line" : 27,
+				"line" : 29,
 				"parent" : 0
 			},
 			{
@@ -91,6 +91,10 @@
 		{
 			"backtrace" : 3,
 			"id" : "bedrock_lib::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "bedrock_encoder::@372742a3ab0a8675e45e"
 		}
 	],
 	"id" : "Bedrock_encoder::@6890427a1f51a3e7e1df",
@@ -121,12 +125,25 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:",
+				"fragment" : "-Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib:",
 				"role" : "libraries"
 			},
 			{
 				"backtrace" : 3,
 				"fragment" : "libbedrock_lib.so",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 3,
+				"fragment" : "encoder/libbedrock_encoder.a",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "../encoder/../lib/rockit/lib/librockit.so",
+				"role" : "libraries"
+			},
+			{
+				"fragment" : "-lpthread",
 				"role" : "libraries"
 			}
 		],

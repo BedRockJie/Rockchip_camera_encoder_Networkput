@@ -25,6 +25,10 @@
 				},
 				{
 					"build" : "encoder",
+					"childIndexes" : 
+					[
+						2
+					],
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.1.0"
@@ -36,6 +40,16 @@
 					[
 						1
 					]
+				},
+				{
+					"build" : "encoder/src",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.1.0"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "encoder/src"
 				}
 			],
 			"name" : "Debug",
@@ -45,7 +59,8 @@
 					"directoryIndexes" : 
 					[
 						0,
-						1
+						1,
+						2
 					],
 					"name" : "Bedrock_encoder",
 					"targetIndexes" : 
@@ -61,21 +76,21 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Bedrock_encoder::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Bedrock_encoder-Debug-ec67de80ecf0c6c6ea57.json",
+					"jsonFile" : "target-Bedrock_encoder-Debug-2c7240a99646b6dc2845.json",
 					"name" : "Bedrock_encoder",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "bedrock_encoder::@372742a3ab0a8675e45e",
-					"jsonFile" : "target-bedrock_encoder-Debug-3966dc43cfe76c1fe35b.json",
+					"jsonFile" : "target-bedrock_encoder-Debug-37d457fc9f5389bc758c.json",
 					"name" : "bedrock_encoder",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 0,
 					"id" : "bedrock_lib::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-bedrock_lib-Debug-96bc492555f8a999bfff.json",
+					"jsonFile" : "target-bedrock_lib-Debug-8c099961a05450168aa2.json",
 					"name" : "bedrock_lib",
 					"projectIndex" : 0
 				}

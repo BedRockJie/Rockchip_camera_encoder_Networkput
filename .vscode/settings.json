@@ -5,7 +5,7 @@
       "rk_mpi.h": "c"
     },
     "C_Cpp.errorSquiggles": "Disabled",
-   
+    "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
     "editor.fontSize": 16,
     // 头部注释
 "fileheader.customMade": {

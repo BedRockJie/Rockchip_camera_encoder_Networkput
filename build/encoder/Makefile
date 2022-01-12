@@ -198,6 +198,87 @@ bedrock_mpi_enc.cpp.s:
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.s
 .PHONY : bedrock_mpi_enc.cpp.s
 
+src/argparse.o: src/argparse.cpp.o
+
+.PHONY : src/argparse.o
+
+# target to build an object file
+src/argparse.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.o
+.PHONY : src/argparse.cpp.o
+
+src/argparse.i: src/argparse.cpp.i
+
+.PHONY : src/argparse.i
+
+# target to preprocess a source file
+src/argparse.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.i
+.PHONY : src/argparse.cpp.i
+
+src/argparse.s: src/argparse.cpp.s
+
+.PHONY : src/argparse.s
+
+# target to generate assembly for a file
+src/argparse.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.s
+.PHONY : src/argparse.cpp.s
+
+src/loadbmp.o: src/loadbmp.cpp.o
+
+.PHONY : src/loadbmp.o
+
+# target to build an object file
+src/loadbmp.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.o
+.PHONY : src/loadbmp.cpp.o
+
+src/loadbmp.i: src/loadbmp.cpp.i
+
+.PHONY : src/loadbmp.i
+
+# target to preprocess a source file
+src/loadbmp.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.i
+.PHONY : src/loadbmp.cpp.i
+
+src/loadbmp.s: src/loadbmp.cpp.s
+
+.PHONY : src/loadbmp.s
+
+# target to generate assembly for a file
+src/loadbmp.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.s
+.PHONY : src/loadbmp.cpp.s
+
+src/mpi_test_utils.o: src/mpi_test_utils.cpp.o
+
+.PHONY : src/mpi_test_utils.o
+
+# target to build an object file
+src/mpi_test_utils.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/mpi_test_utils.cpp.o
+.PHONY : src/mpi_test_utils.cpp.o
+
+src/mpi_test_utils.i: src/mpi_test_utils.cpp.i
+
+.PHONY : src/mpi_test_utils.i
+
+# target to preprocess a source file
+src/mpi_test_utils.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/mpi_test_utils.cpp.i
+.PHONY : src/mpi_test_utils.cpp.i
+
+src/mpi_test_utils.s: src/mpi_test_utils.cpp.s
+
+.PHONY : src/mpi_test_utils.s
+
+# target to generate assembly for a file
+src/mpi_test_utils.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/mpi_test_utils.cpp.s
+.PHONY : src/mpi_test_utils.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -214,6 +295,15 @@ help:
 	@echo "... bedrock_mpi_enc.o"
 	@echo "... bedrock_mpi_enc.i"
 	@echo "... bedrock_mpi_enc.s"
+	@echo "... src/argparse.o"
+	@echo "... src/argparse.i"
+	@echo "... src/argparse.s"
+	@echo "... src/loadbmp.o"
+	@echo "... src/loadbmp.i"
+	@echo "... src/loadbmp.s"
+	@echo "... src/mpi_test_utils.o"
+	@echo "... src/mpi_test_utils.i"
+	@echo "... src/mpi_test_utils.s"
 .PHONY : help
 
 

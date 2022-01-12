@@ -1,2 +1,2 @@
-/usr/bin/ar qc libbedrock_encoder.a  CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o
+/usr/bin/ar qc libbedrock_encoder.a  CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.o CMakeFiles/bedrock_encoder.dir/src/mpi_test_utils.cpp.o CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.o
 /usr/bin/ranlib libbedrock_encoder.a

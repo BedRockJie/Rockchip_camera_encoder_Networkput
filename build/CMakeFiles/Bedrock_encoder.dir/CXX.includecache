@@ -6,27 +6,3 @@
 
 #IncludeRegexTransform: 
 
-../encoder/inc/bedrock_enc.h
-
-../inc/bedrock_control.h
-
-../inc/bedrock_log.h
-minilogger/log.h
-../inc/minilogger/log.h
-
-../inc/bedrock_test.h
-
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/main.cpp
-stdio.h
--
-stdlib.h
--
-bedrock_log.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/bedrock_log.h
-bedrock_control.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/bedrock_control.h
-bedrock_test.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/bedrock_test.h
-bedrock_enc.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/bedrock_enc.h
-

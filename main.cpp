@@ -4,9 +4,9 @@
  * @Autor: Bedrock
  * @Date: 2021-12-28 19:48:06
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-02 15:49:07
+ * @LastEditTime: 2022-01-11 21:02:13
  * @Author: Bedrock
- * @FilePath: /bedrock_encoder/main.c
+ * @FilePath: /bedrock_encoder/main.cpp
  * @版权声明
  */
 
@@ -30,6 +30,6 @@ int main(int argc, char const *argv[])
     printf("Hello word!\n");
     adjust_log_level();
     dlog_level_test();
-    
+    bedrock_main(argc,argv);
     return 0;
 }

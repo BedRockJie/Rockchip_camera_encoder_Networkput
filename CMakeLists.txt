@@ -18,7 +18,9 @@ set(LIB_SOURCE
 add_library(bedrock_lib SHARED ${LIB_SOURCE})
 
 set(BEDROCK_DEPENDENT_LIBS
-    bedrock_lib)
+    bedrock_lib
+    bedrock_encoder
+)
 
 set(SOURCES main.cpp)
 

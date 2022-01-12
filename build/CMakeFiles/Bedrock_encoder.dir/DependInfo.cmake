@@ -17,6 +17,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles/bedrock_lib.dir/DependInfo.cmake"
+  "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder/CMakeFiles/bedrock_encoder.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
