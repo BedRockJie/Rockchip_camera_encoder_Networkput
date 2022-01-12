@@ -86,7 +86,7 @@ struct argparse_option {
     intptr_t data;
     int flags;
 };
-typedef struct argparse_option argparse_option;
+
 
 /**
  * argparse 参数解析

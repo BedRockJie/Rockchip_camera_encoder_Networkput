@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-12 12:38:29
+ * @LastEditTime: 2022-01-12 22:50:46
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/bedrock_mpi_enc.cpp
  * @版权声明
@@ -33,7 +33,10 @@
 
 #define MAX_TIME_OUT_ME 20
 #define TEST_RC_MODE 0
-
+#define INPUT_FILE "/nfs/bridge-far_cif.yuv"
+#define OUTPUT_FILE "/nfs/bride"
+#define WIDTH 352
+#define HEIGHT 288
 typedef struct _rkMpiVENCCtx {
     const char     *srcFileUri;
     const char     *dstFilePath;
@@ -159,7 +162,7 @@ void* venc_get_stream(void *pArgs) {
     if (pstCtx->dstFilePath != RK_NULL) {
         mkdir(pstCtx->dstFilePath, 0777);
 
-        snprintf(name, sizeof(name), "%s/test_%d.bin",
+        snprintf(name, sizeof(name), "%s/test_%d.h264",
             pstCtx->dstFilePath, pstCtx->u32ChnIndex);
 
         fp = fopen(name, "wb");
@@ -400,7 +403,13 @@ RK_S32 unit_test_mpi_venc(Bedrock_VENC_CTX_S *ctx) {
 
     return RK_SUCCESS;
 }
-
+static void setting_default_argc(Bedrock_VENC_CTX_S *ctx) {
+    ctx->srcFileUri = INPUT_FILE;
+    ctx->dstFilePath = OUTPUT_FILE;
+    ctx->u32SrcWidth = WIDTH;
+    ctx->u32SrcHeight = HEIGHT;
+    ctx->s32LoopCount = 100;
+}
 /*** 
  * @description: 
  * @param {int} argc
@@ -464,9 +473,13 @@ int bedrock_main(int argc, char const* argv[])
     mpi_venc_test_show_options(&ctx);
     
     if (check_options(&ctx)) {
-        argparse_usage(&argparse);
-        return RK_FAILURE;
+        //argparse_usage(&argparse);
+        RK_PRINT("Not Setting for arg, Setting default arg\n");
+        setting_default_argc(&ctx);
+        //return RK_FAILURE;
     }
+    mpi_venc_test_show_options(&ctx);
+
     s32Ret = RK_MPI_SYS_Init();
     if (s32Ret != RK_SUCCESS) {
         return s32Ret;
