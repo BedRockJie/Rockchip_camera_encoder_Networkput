@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc 
+CXX_INCLUDES = -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/rockit/include -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/libconfig/include 
 

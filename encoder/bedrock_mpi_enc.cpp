@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-13 11:19:47
+ * @LastEditTime: 2022-01-13 12:52:39
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/bedrock_mpi_enc.cpp
  * @版权声明
@@ -19,15 +19,11 @@
 #include <cstdlib>
 #include <cstring>
 
-#include "rk_debug.h"
-#include "rk_mpi_cal.h"
-#include "rk_mpi_mb.h"
-#include "rk_mpi_sys.h"
-#include "rk_mpi_venc.h"
 
 #include "argparse.h"
 #include "mpi_test_utils.h"
 #include "bedrock_enc.h"
+#include "filecfg.h"
 
 #define LOG_TAG "bedrock_enc_lib"
 
@@ -37,23 +33,7 @@
 #define OUTPUT_FILE "/nfs/bride"
 #define WIDTH 352
 #define HEIGHT 288
-typedef struct _rkMpiVENCCtx {
-    const char     *srcFileUri;
-    const char     *dstFilePath;
-    RK_U32          u32SrcWidth;
-    RK_U32          u32SrcHeight;
-    RK_U32          u32srcVirWidth;
-    RK_U32          u32srcVirHeight;
-    RK_S32          s32LoopCount;
-    RK_U32          u32ChnIndex;
-    RK_U32          u32ChNum;
-    RK_U32          u32SrcPixFormat;
-    RK_U32          u32DstCodec;
-    RK_U32          u32BufferSize;
-    RK_U32          u32StreamBufCnt;
-    RK_BOOL         threadExit;
-    MB_POOL         vencPool;
-} Bedrock_VENC_CTX_S;
+
 static RK_S32 read_with_pixel_width(RK_U8 *pBuf, RK_U32 u32Width, RK_U32 u32Height,
                                      RK_U32 u32VirWidth, RK_U32 u32PixWidth, FILE *fp) {
     RK_U32 u32Row;
@@ -425,7 +405,8 @@ int bedrock_main(int argc, char const* argv[])
     RK_S32 s32Ret = RK_SUCCESS;
     Bedrock_VENC_CTX_S ctx;
     memset(&ctx, 0, sizeof(Bedrock_VENC_CTX_S));
-
+    
+    init_argc_for_cfg(&ctx);
     ctx.s32LoopCount    = 1;
     ctx.u32StreamBufCnt = 8;
     ctx.u32ChNum        = 1;

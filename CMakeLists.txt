@@ -6,8 +6,11 @@ project(Bedrock_encoder)
 include_directories(inc)
 include_directories(encoder/inc)
 
-set(ROCKIT_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/lib/rockit/include)
+set(ROCKIT_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/lib/rockit/include
+                   ${CMAKE_CURRENT_LIST_DIR}/lib/libconfig/include                
+)
 
+include_directories(${ROCKIT_INCLUDE})
 
 add_subdirectory(encoder)
 
@@ -32,5 +35,6 @@ target_link_libraries(${PROJECT_NAME} ${BEDROCK_DEPENDENT_LIBS})
 
 install(TARGETS Bedrock_encoder DESTINATION bin)
 install(TARGETS bedrock_lib DESTINATION lib)
+install(FILES ./test/bedrock_mpi.cfg DESTINATION bin)
 # install(FILES ./inc/bedrock_control.h DESTINATION include)
 # install(DIRECTORY ./inc DESTINATION include FILES_MATCHING PATTERN "*.h")

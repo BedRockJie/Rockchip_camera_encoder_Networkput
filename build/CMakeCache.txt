@@ -218,7 +218,7 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/bin/pkg-config
 
 //Dependencies for the target
-bedrock_encoder_LIB_DEPENDS:STATIC=general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib/librockit.so;general;-lpthread;
+bedrock_encoder_LIB_DEPENDS:STATIC=general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib/librockit.so;general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib/libconfig.so;general;-lpthread;
 
 //Path to a library.
 pkgcfg_lib_ROCKCHIP_MPP_rockchip_mpp:FILEPATH=/usr/local/lib/librockchip_mpp.so

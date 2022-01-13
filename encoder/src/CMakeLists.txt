@@ -11,5 +11,6 @@ set(RK_MPI_BEDROCK_COMMON_SRC
     ${CMAKE_CURRENT_SOURCE_DIR}/argparse.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/mpi_test_utils.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/loadbmp.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/filecfg.cpp
     PARENT_SCOPE
 )

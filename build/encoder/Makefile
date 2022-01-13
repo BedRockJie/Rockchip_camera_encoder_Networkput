@@ -225,6 +225,33 @@ src/argparse.cpp.s:
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.s
 .PHONY : src/argparse.cpp.s
 
+src/filecfg.o: src/filecfg.cpp.o
+
+.PHONY : src/filecfg.o
+
+# target to build an object file
+src/filecfg.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o
+.PHONY : src/filecfg.cpp.o
+
+src/filecfg.i: src/filecfg.cpp.i
+
+.PHONY : src/filecfg.i
+
+# target to preprocess a source file
+src/filecfg.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.i
+.PHONY : src/filecfg.cpp.i
+
+src/filecfg.s: src/filecfg.cpp.s
+
+.PHONY : src/filecfg.s
+
+# target to generate assembly for a file
+src/filecfg.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.s
+.PHONY : src/filecfg.cpp.s
+
 src/loadbmp.o: src/loadbmp.cpp.o
 
 .PHONY : src/loadbmp.o
@@ -298,6 +325,9 @@ help:
 	@echo "... src/argparse.o"
 	@echo "... src/argparse.i"
 	@echo "... src/argparse.s"
+	@echo "... src/filecfg.o"
+	@echo "... src/filecfg.i"
+	@echo "... src/filecfg.s"
 	@echo "... src/loadbmp.o"
 	@echo "... src/loadbmp.i"
 	@echo "... src/loadbmp.s"

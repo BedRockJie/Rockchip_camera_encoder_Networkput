@@ -23,6 +23,24 @@ encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/bedrock
 encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.o: ../encoder/inc/argparse.h
 encoder/CMakeFiles/bedrock_encoder.dir/src/argparse.cpp.o: ../encoder/src/argparse.cpp
 
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../encoder/inc/bedrock_enc.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/libconfig/include/libconfig.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_comm_mb.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_comm_rc.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_comm_sys.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_comm_venc.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_comm_video.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_common.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_debug.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_defines.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_errno.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_mpi_cal.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_mpi_mb.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_mpi_sys.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_mpi_venc.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../lib/rockit/include/rk_type.h
+encoder/CMakeFiles/bedrock_encoder.dir/src/filecfg.cpp.o: ../encoder/src/filecfg.cpp
+
 encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.o: ../encoder/inc/loadbmp.h
 encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.o: ../lib/rockit/include/rk_type.h
 encoder/CMakeFiles/bedrock_encoder.dir/src/loadbmp.cpp.o: ../encoder/src/loadbmp.cpp

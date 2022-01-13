@@ -18,6 +18,8 @@ set(CMAKE_TARGET_DEFINITIONS_C
 set(CMAKE_C_TARGET_INCLUDE_PATH
   "../inc"
   "../encoder/inc"
+  "../lib/rockit/include"
+  "../lib/libconfig/include"
   )
 
 # Targets to which this target links.

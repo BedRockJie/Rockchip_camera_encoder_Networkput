@@ -6,19 +6,21 @@
 
 #IncludeRegexTransform: 
 
-../encoder/inc/argparse.h
-stdint.h
--
-
 ../encoder/inc/bedrock_enc.h
-
-../encoder/inc/mpi_test_utils.h
-rk_type.h
-../encoder/inc/rk_type.h
 rk_debug.h
 ../encoder/inc/rk_debug.h
-rk_comm_video.h
-../encoder/inc/rk_comm_video.h
+rk_mpi_cal.h
+../encoder/inc/rk_mpi_cal.h
+rk_mpi_mb.h
+../encoder/inc/rk_mpi_mb.h
+rk_mpi_sys.h
+../encoder/inc/rk_mpi_sys.h
+rk_mpi_venc.h
+../encoder/inc/rk_mpi_venc.h
+
+../lib/libconfig/include/libconfig.h
+stdio.h
+-
 
 ../lib/rockit/include/rk_comm_mb.h
 rk_type.h
@@ -126,37 +128,13 @@ rk_comm_venc.h
 stdint.h
 -
 
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_mpi_enc.cpp
-pthread.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/src/filecfg.cpp
+stdio.h
 -
-sys/stat.h
+stdlib.h
 -
-sys/types.h
--
-unistd.h
--
-cerrno
--
-cstdio
--
-cstdlib
--
-cstring
--
-rk_debug.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/rk_debug.h
-rk_mpi_cal.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/rk_mpi_cal.h
-rk_mpi_mb.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/rk_mpi_mb.h
-rk_mpi_sys.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/rk_mpi_sys.h
-rk_mpi_venc.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/rk_mpi_venc.h
-argparse.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/argparse.h
-mpi_test_utils.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/mpi_test_utils.h
+libconfig.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/src/libconfig.h
 bedrock_enc.h
-/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/bedrock_enc.h
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/src/bedrock_enc.h
 

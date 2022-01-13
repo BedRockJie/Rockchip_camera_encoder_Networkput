@@ -1627,7 +1627,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib/librockit.so;general;-lpthread;"
+			"value" : "general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib/librockit.so;general;/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib/libconfig.so;general;-lpthread;"
 		},
 		{
 			"name" : "pkgcfg_lib_ROCKCHIP_MPP_rockchip_mpp",

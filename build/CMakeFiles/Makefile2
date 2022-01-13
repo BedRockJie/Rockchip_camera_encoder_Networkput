@@ -122,7 +122,7 @@ CMakeFiles/Bedrock_encoder.dir/all: encoder/CMakeFiles/bedrock_encoder.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Bedrock_encoder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Bedrock_encoder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 0
 .PHONY : CMakeFiles/Bedrock_encoder.dir/rule
@@ -144,7 +144,7 @@ CMakeFiles/Bedrock_encoder.dir/clean:
 CMakeFiles/bedrock_lib.dir/all:
 	$(MAKE) -f CMakeFiles/bedrock_lib.dir/build.make CMakeFiles/bedrock_lib.dir/depend
 	$(MAKE) -f CMakeFiles/bedrock_lib.dir/build.make CMakeFiles/bedrock_lib.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=8,9,10 "Built target bedrock_lib"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=9,10,11 "Built target bedrock_lib"
 .PHONY : CMakeFiles/bedrock_lib.dir/all
 
 # Build rule for subdir invocation for target.
@@ -171,12 +171,12 @@ CMakeFiles/bedrock_lib.dir/clean:
 encoder/CMakeFiles/bedrock_encoder.dir/all:
 	$(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/depend
 	$(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=3,4,5,6,7 "Built target bedrock_encoder"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target bedrock_encoder"
 .PHONY : encoder/CMakeFiles/bedrock_encoder.dir/all
 
 # Build rule for subdir invocation for target.
 encoder/CMakeFiles/bedrock_encoder.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 6
 	$(MAKE) -f CMakeFiles/Makefile2 encoder/CMakeFiles/bedrock_encoder.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/CMakeFiles 0
 .PHONY : encoder/CMakeFiles/bedrock_encoder.dir/rule
