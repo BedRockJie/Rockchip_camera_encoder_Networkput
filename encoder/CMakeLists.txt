@@ -8,7 +8,8 @@ include_directories(${ROCKIT_INCLUDE})
 add_subdirectory(src)
 
 set(ROCKIT_DEP_COMMON_LIBS 
-    ${CMAKE_CURRENT_LIST_DIR}/../lib/rockit/lib/librockit.so)
+    ${CMAKE_CURRENT_LIST_DIR}/../lib/rockit/lib/librockit.so
+    ${CMAKE_CURRENT_LIST_DIR}/../lib/libconfig/lib/libconfig.so)
     
 if(CMAKE_SYSTEM_NAME MATCHES "Linux")
     set(ROCKIT_DEP_COMMON_LIBS

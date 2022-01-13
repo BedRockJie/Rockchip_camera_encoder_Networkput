@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-12 22:50:46
+ * @LastEditTime: 2022-01-13 11:19:47
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/bedrock_mpi_enc.cpp
  * @版权声明
@@ -410,12 +410,14 @@ static void setting_default_argc(Bedrock_VENC_CTX_S *ctx) {
     ctx->u32SrcHeight = HEIGHT;
     ctx->s32LoopCount = 100;
 }
+
 /*** 
  * @description: 
  * @param {int} argc
  * @param {char const*} argv
  * @return {*}
  * @author: Bedrock
+ * @brief: 功能入口函数
  * @use: 
  */
 int bedrock_main(int argc, char const* argv[]) 
