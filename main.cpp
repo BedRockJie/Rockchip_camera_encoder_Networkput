@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2021-12-28 19:48:06
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-13 12:18:41
+ * @LastEditTime: 2022-01-20 21:08:28
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/main.cpp
  * @版权声明
@@ -16,6 +16,7 @@
 #include "bedrock_control.h"
 #include "bedrock_test.h"
 #include "bedrock_enc.h"
+#include "bedrock_rtsp.h"
 /*
 * main->
 * 1. 初始化变量及内存
@@ -30,6 +31,7 @@ int main(int argc, char const *argv[])
     printf("Hello word!\n");
     adjust_log_level();
     dlog_level_test();
-    bedrock_main(argc, argv);
+    //bedrock_main(argc, argv);
+    bendrock_rtsp_test(argc,argv);
     return 0;
 }

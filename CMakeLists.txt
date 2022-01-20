@@ -5,6 +5,7 @@ project(Bedrock_encoder)
 
 include_directories(inc)
 include_directories(encoder/inc)
+include_directories(rtsp/inc)
 
 set(ROCKIT_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/lib/rockit/include
                    ${CMAKE_CURRENT_LIST_DIR}/lib/libconfig/include                
@@ -13,6 +14,7 @@ set(ROCKIT_INCLUDE ${CMAKE_CURRENT_LIST_DIR}/lib/rockit/include
 include_directories(${ROCKIT_INCLUDE})
 
 add_subdirectory(encoder)
+add_subdirectory(rtsp)
 
 set(LIB_SOURCE
     control/bedrock_control.c
@@ -23,6 +25,7 @@ add_library(bedrock_lib SHARED ${LIB_SOURCE})
 set(BEDROCK_DEPENDENT_LIBS
     bedrock_lib
     bedrock_encoder
+    bedrock_rtsp
 )
 
 set(SOURCES main.cpp)

@@ -2,7 +2,8 @@
     "files.associations": {
       "*.param": "makefile",
       "bedrock_log.h": "c",
-      "rk_mpi.h": "c"
+      "rk_mpi.h": "c",
+      "thread": "cpp"
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
