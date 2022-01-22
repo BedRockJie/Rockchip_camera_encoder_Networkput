@@ -32,4 +32,5 @@
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/list_install_components.dir
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/rebuild_cache.dir
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/edit_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/bedrock_fcg_test.dir
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/bedrock_test.dir

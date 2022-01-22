@@ -57,5 +57,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/bedrock_lib.dir/DependInfo.cmake"
   "encoder/CMakeFiles/bedrock_encoder.dir/DependInfo.cmake"
   "rtsp/CMakeFiles/bedrock_rtsp.dir/DependInfo.cmake"
+  "test/CMakeFiles/bedrock_fcg_test.dir/DependInfo.cmake"
   "test/CMakeFiles/bedrock_test.dir/DependInfo.cmake"
   )

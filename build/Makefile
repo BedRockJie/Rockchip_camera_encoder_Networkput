@@ -209,6 +209,19 @@ bedrock_rtsp/fast:
 .PHONY : bedrock_rtsp/fast
 
 #=============================================================================
+# Target rules for targets named bedrock_fcg_test
+
+# Build rule for target.
+bedrock_fcg_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bedrock_fcg_test
+.PHONY : bedrock_fcg_test
+
+# fast build rule for target.
+bedrock_fcg_test/fast:
+	$(MAKE) -f test/CMakeFiles/bedrock_fcg_test.dir/build.make test/CMakeFiles/bedrock_fcg_test.dir/build
+.PHONY : bedrock_fcg_test/fast
+
+#=============================================================================
 # Target rules for targets named bedrock_test
 
 # Build rule for target.
@@ -318,6 +331,7 @@ help:
 	@echo "... bedrock_lib"
 	@echo "... bedrock_encoder"
 	@echo "... bedrock_rtsp"
+	@echo "... bedrock_fcg_test"
 	@echo "... bedrock_test"
 	@echo "... control/bedrock_control.o"
 	@echo "... control/bedrock_control.i"

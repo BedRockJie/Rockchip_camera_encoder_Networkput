@@ -157,6 +157,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+test/CMakeFiles/bedrock_fcg_test.dir/rule:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/bedrock_fcg_test.dir/rule
+.PHONY : test/CMakeFiles/bedrock_fcg_test.dir/rule
+
+# Convenience name for target.
+bedrock_fcg_test: test/CMakeFiles/bedrock_fcg_test.dir/rule
+
+.PHONY : bedrock_fcg_test
+
+# fast build rule for target.
+bedrock_fcg_test/fast:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f test/CMakeFiles/bedrock_fcg_test.dir/build.make test/CMakeFiles/bedrock_fcg_test.dir/build
+.PHONY : bedrock_fcg_test/fast
+
+# Convenience name for target.
 test/CMakeFiles/bedrock_test.dir/rule:
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f CMakeFiles/Makefile2 test/CMakeFiles/bedrock_test.dir/rule
 .PHONY : test/CMakeFiles/bedrock_test.dir/rule
@@ -170,6 +185,33 @@ bedrock_test: test/CMakeFiles/bedrock_test.dir/rule
 bedrock_test/fast:
 	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f test/CMakeFiles/bedrock_test.dir/build.make test/CMakeFiles/bedrock_test.dir/build
 .PHONY : bedrock_test/fast
+
+bedrock_cfgf_test.o: bedrock_cfgf_test.cpp.o
+
+.PHONY : bedrock_cfgf_test.o
+
+# target to build an object file
+bedrock_cfgf_test.cpp.o:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f test/CMakeFiles/bedrock_fcg_test.dir/build.make test/CMakeFiles/bedrock_fcg_test.dir/bedrock_cfgf_test.cpp.o
+.PHONY : bedrock_cfgf_test.cpp.o
+
+bedrock_cfgf_test.i: bedrock_cfgf_test.cpp.i
+
+.PHONY : bedrock_cfgf_test.i
+
+# target to preprocess a source file
+bedrock_cfgf_test.cpp.i:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f test/CMakeFiles/bedrock_fcg_test.dir/build.make test/CMakeFiles/bedrock_fcg_test.dir/bedrock_cfgf_test.cpp.i
+.PHONY : bedrock_cfgf_test.cpp.i
+
+bedrock_cfgf_test.s: bedrock_cfgf_test.cpp.s
+
+.PHONY : bedrock_cfgf_test.s
+
+# target to generate assembly for a file
+bedrock_cfgf_test.cpp.s:
+	cd /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build && $(MAKE) -f test/CMakeFiles/bedrock_fcg_test.dir/build.make test/CMakeFiles/bedrock_fcg_test.dir/bedrock_cfgf_test.cpp.s
+.PHONY : bedrock_cfgf_test.cpp.s
 
 bedrock_test.o: bedrock_test.cpp.o
 
@@ -210,7 +252,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... bedrock_fcg_test"
 	@echo "... bedrock_test"
+	@echo "... bedrock_cfgf_test.o"
+	@echo "... bedrock_cfgf_test.i"
+	@echo "... bedrock_cfgf_test.s"
 	@echo "... bedrock_test.o"
 	@echo "... bedrock_test.i"
 	@echo "... bedrock_test.s"

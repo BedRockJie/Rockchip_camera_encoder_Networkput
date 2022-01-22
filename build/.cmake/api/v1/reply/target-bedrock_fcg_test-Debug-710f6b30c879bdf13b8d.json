@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test/bedrock_test"
+			"path" : "test/bedrock_fcg_test"
 		}
 	],
 	"backtrace" : 1,
@@ -11,7 +11,6 @@
 		"commands" : 
 		[
 			"add_executable",
-			"install",
 			"target_link_libraries",
 			"include_directories"
 		],
@@ -28,50 +27,44 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 14,
+				"line" : 16,
 				"parent" : 0
 			},
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 18,
-				"parent" : 0
-			},
-			{
-				"command" : 2,
-				"file" : 0,
-				"line" : 16,
+				"line" : 20,
 				"parent" : 0
 			},
 			{
 				"file" : 1
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 1,
 				"line" : 6,
-				"parent" : 4
+				"parent" : 3
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 1,
 				"line" : 7,
-				"parent" : 4
+				"parent" : 3
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 1,
 				"line" : 8,
-				"parent" : 4
+				"parent" : 3
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 1,
 				"line" : 14,
-				"parent" : 4
+				"parent" : 3
 			},
 			{
-				"command" : 3,
+				"command" : 2,
 				"file" : 0,
 				"line" : 12,
 				"parent" : 0
@@ -93,39 +86,39 @@
 			"includes" : 
 			[
 				{
-					"backtrace" : 5,
+					"backtrace" : 4,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc"
 				},
 				{
-					"backtrace" : 6,
+					"backtrace" : 5,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc"
 				},
 				{
-					"backtrace" : 7,
+					"backtrace" : 6,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/rtsp/inc"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/rockit/include"
 				},
 				{
-					"backtrace" : 8,
+					"backtrace" : 7,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/libconfig/include"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/../rtsp/src"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/../rtsp/src/3rdpart"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/../rtsp/src/net"
 				},
 				{
-					"backtrace" : 9,
+					"backtrace" : 8,
 					"path" : "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/test/../rtsp/src/xop"
 				}
 			],
@@ -139,33 +132,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 3,
+			"backtrace" : 2,
 			"id" : "bedrock_lib::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 3,
+			"backtrace" : 2,
 			"id" : "bedrock_encoder::@372742a3ab0a8675e45e"
 		},
 		{
-			"backtrace" : 3,
+			"backtrace" : 2,
 			"id" : "bedrock_rtsp::@10e599b6217309311413"
 		}
 	],
-	"id" : "bedrock_test::@36f028580bb02cc8272a",
-	"install" : 
-	{
-		"destinations" : 
-		[
-			{
-				"backtrace" : 2,
-				"path" : "bin"
-			}
-		],
-		"prefix" : 
-		{
-			"path" : "/usr/local"
-		}
-	},
+	"id" : "bedrock_fcg_test::@36f028580bb02cc8272a",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -179,21 +158,21 @@
 				"role" : "flags"
 			},
 			{
-				"fragment" : "-Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib:",
+				"fragment" : "-Wl,-rpath,/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "../libbedrock_lib.so",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "../encoder/libbedrock_encoder.a",
 				"role" : "libraries"
 			},
 			{
-				"backtrace" : 3,
+				"backtrace" : 2,
 				"fragment" : "../rtsp/libbedrock_rtsp.a",
 				"role" : "libraries"
 			},
@@ -216,8 +195,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "bedrock_test",
-	"nameOnDisk" : "bedrock_test",
+	"name" : "bedrock_fcg_test",
+	"nameOnDisk" : "bedrock_fcg_test",
 	"paths" : 
 	{
 		"build" : "test",
@@ -238,7 +217,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "test/bedrock_test.cpp",
+			"path" : "test/bedrock_cfgf_test.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

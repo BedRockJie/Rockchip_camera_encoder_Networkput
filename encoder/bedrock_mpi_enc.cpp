@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-21 19:53:26
+ * @LastEditTime: 2022-01-22 16:53:45
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/bedrock_mpi_enc.cpp
  * @版权声明
@@ -412,9 +412,9 @@ RK_S32 mpi_enc_init(Bedrock_VENC_CTX_S *ctx)
     VENC_RECV_PIC_PARAM_S   stRecvParam;
     VENC_RC_PARAM_S         stRcParam;
     MB_POOL_CONFIG_S        stMbPoolCfg;
- 
+    const char *file = NULL;
     /*文件参数解析(未实现)*/
-    s32Ret = init_argc_for_cfg(ctx);
+    s32Ret = init_argc_for_cfg(ctx, file);
     setting_default_argc(ctx);
     mpi_venc_test_show_options(ctx);
     /*开始进行初始化参数设置*/
@@ -508,8 +508,8 @@ int bedrock_main(int argc, char const* argv[])
     RK_S32 s32Ret = RK_SUCCESS;
     Bedrock_VENC_CTX_S ctx;
     memset(&ctx, 0, sizeof(Bedrock_VENC_CTX_S));
-    
-    init_argc_for_cfg(&ctx);
+    const char *file = NULL;
+    init_argc_for_cfg(&ctx, file);
     ctx.s32LoopCount    = 1;
     ctx.u32StreamBufCnt = 8;
     ctx.u32ChNum        = 1;

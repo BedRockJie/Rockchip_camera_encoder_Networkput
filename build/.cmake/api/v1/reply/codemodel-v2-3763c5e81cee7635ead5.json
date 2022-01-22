@@ -22,7 +22,7 @@
 					"targetIndexes" : 
 					[
 						0,
-						2
+						3
 					]
 				},
 				{
@@ -64,7 +64,7 @@
 					"source" : "rtsp",
 					"targetIndexes" : 
 					[
-						3
+						4
 					]
 				},
 				{
@@ -79,7 +79,8 @@
 					"source" : "test",
 					"targetIndexes" : 
 					[
-						4
+						2,
+						5
 					]
 				}
 			],
@@ -102,7 +103,8 @@
 						1,
 						2,
 						3,
-						4
+						4,
+						5
 					]
 				}
 			],
@@ -123,6 +125,13 @@
 					"projectIndex" : 0
 				},
 				{
+					"directoryIndex" : 4,
+					"id" : "bedrock_fcg_test::@36f028580bb02cc8272a",
+					"jsonFile" : "target-bedrock_fcg_test-Debug-710f6b30c879bdf13b8d.json",
+					"name" : "bedrock_fcg_test",
+					"projectIndex" : 0
+				},
+				{
 					"directoryIndex" : 0,
 					"id" : "bedrock_lib::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-bedrock_lib-Debug-bd0e618f545aac25998f.json",
@@ -139,7 +148,7 @@
 				{
 					"directoryIndex" : 4,
 					"id" : "bedrock_test::@36f028580bb02cc8272a",
-					"jsonFile" : "target-bedrock_test-Debug-72015f95765c357c1b8c.json",
+					"jsonFile" : "target-bedrock_test-Debug-201f9434d92ef37a5384.json",
 					"name" : "bedrock_test",
 					"projectIndex" : 0
 				}

@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-21 20:18:47
+ * @LastEditTime: 2022-01-22 16:56:43
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/test/bedrock_test.cpp
  * @版权声明
@@ -339,8 +339,8 @@ int main(int argc, char const* argv[])
     pthread_t               vencThread[VENC_MAX_CHN_NUM];
     pthread_t               getStreamThread[VENC_MAX_CHN_NUM];
     memset(&ctx, 0, sizeof(Bedrock_VENC_CTX_S));
-    
-    init_argc_for_cfg(&ctx);
+    const char* file = NULL;
+    init_argc_for_cfg(&ctx, file);
     ctx.s32LoopCount    = 1;
     ctx.u32StreamBufCnt = 8;
     ctx.u32ChNum        = 1;

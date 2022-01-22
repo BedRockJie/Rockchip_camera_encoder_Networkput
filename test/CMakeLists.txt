@@ -13,6 +13,11 @@ include_directories(${RTSP_INCLUDE})
 
 add_executable(bedrock_test bedrock_test.cpp)
 
+add_executable(bedrock_fcg_test bedrock_cfgf_test.cpp)
+
 target_link_libraries(bedrock_test ${BEDROCK_DEPENDENT_LIBS})
 
+target_link_libraries(bedrock_fcg_test ${BEDROCK_DEPENDENT_LIBS})
+
 install(TARGETS bedrock_test DESTINATION bin)
+install(TARGETS bedrock_fcg_test DESTINATION bin)
