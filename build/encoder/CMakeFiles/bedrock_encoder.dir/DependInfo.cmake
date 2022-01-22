@@ -16,6 +16,7 @@ set(CMAKE_CXX_COMPILER_ID "GNU")
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../inc"
   "../encoder/inc"
+  "../rtsp/inc"
   "../lib/rockit/include"
   "../lib/libconfig/include"
   )

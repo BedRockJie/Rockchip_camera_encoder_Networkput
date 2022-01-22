@@ -6,5 +6,5 @@ C_FLAGS = -g -fPIC
 
 C_DEFINES = -Dbedrock_lib_EXPORTS
 
-C_INCLUDES = -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/rockit/include -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/libconfig/include 
+C_INCLUDES = -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/rtsp/inc -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/rockit/include -I/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/lib/libconfig/include 
 

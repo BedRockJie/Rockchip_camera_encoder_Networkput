@@ -19,3 +19,17 @@
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder/src/CMakeFiles/list_install_components.dir
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder/src/CMakeFiles/rebuild_cache.dir
 /home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/encoder/src/CMakeFiles/edit_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/install/strip.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/install/local.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/install.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/list_install_components.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/rebuild_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/edit_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/rtsp/CMakeFiles/bedrock_rtsp.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/install/strip.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/install/local.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/install.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/list_install_components.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/rebuild_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/edit_cache.dir
+/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/CMakeFiles/bedrock_test.dir

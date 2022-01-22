@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-20 13:40:03
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-20 21:10:31
+ * @LastEditTime: 2022-01-21 17:56:05
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/rtsp/bedrock_rtsp.cpp
  * @版权声明
@@ -15,7 +15,8 @@
 #include <memory>
 #include <iostream>
 #include <string>
-
+#include <pthread.h>
+#include "bedrock_enc.h"
 class H264File
 {
 public:
@@ -39,6 +40,39 @@ private:
 };
 
 void SendFrameThread(xop::RtspServer* rtsp_server, xop::MediaSessionId session_id, H264File* h264_file);
+
+int bedrock_rtsp_init()
+{
+	RK_S32 ret = RK_SUCCESS;
+	std::string suffix = "live";
+	std::string ip = "192.168.0.108";
+	std::string port = "554";
+	std::string rtsp_url = "rtsp://" + ip + ":" + port + "/" + suffix;
+	
+	std::shared_ptr<xop::EventLoop> event_loop(new xop::EventLoop());
+	std::shared_ptr<xop::RtspServer> server = xop::RtspServer::Create(event_loop.get());
+
+	if (!server->Start("0.0.0.0", atoi(port.c_str()))) {
+		printf("RTSP Server listen on %s failed.\n", port.c_str());
+		return 0;
+	}
+	xop::MediaSession *session = xop::MediaSession::CreateNew("live"); 
+	session->AddSource(xop::channel_0, xop::H264Source::CreateNew()); 
+	//session->StartMulticast(); 
+	session->AddNotifyConnectedCallback([] (xop::MediaSessionId sessionId, std::string peer_ip, uint16_t peer_port){
+		printf("RTSP client connect, ip=%s, port=%hu \n", peer_ip.c_str(), peer_port);
+	});
+   
+	session->AddNotifyDisconnectedCallback([](xop::MediaSessionId sessionId, std::string peer_ip, uint16_t peer_port) {
+		printf("RTSP client disconnect, ip=%s, port=%hu \n", peer_ip.c_str(), peer_port);
+	});
+
+	xop::MediaSessionId session_id = server->AddSession(session);
+	
+	std::cout << "Play URL: " << rtsp_url << std::endl;
+	return ret;
+}
+
 
 int bendrock_rtsp_test(int argc, char const *argv[])
 {	

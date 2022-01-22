@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-13 12:52:39
+ * @LastEditTime: 2022-01-21 19:53:26
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/bedrock_mpi_enc.cpp
  * @版权声明
@@ -50,7 +50,7 @@ static RK_S32 read_with_pixel_width(RK_U8 *pBuf, RK_U32 u32Width, RK_U32 u32Heig
 
     return RK_SUCCESS;
 }
-static RK_S32 read_image(RK_U8 *pVirAddr, RK_U32 u32Width, RK_U32 u32Height,
+RK_S32 read_image(RK_U8 *pVirAddr, RK_U32 u32Width, RK_U32 u32Height,
                                   RK_U32 u32VirWidth, RK_U32 u32VirHeight, RK_U32 u32PixFormat, FILE *fp) {
     RK_U32 u32Row = 0;
     RK_U32 u32ReadSize = 0;
@@ -129,7 +129,7 @@ static void mpi_venc_test_show_options(const Bedrock_VENC_CTX_S *ctx) {
     return;
 }
 
-void* venc_get_stream(void *pArgs) {
+static void* venc_get_stream(void *pArgs) {
     Bedrock_VENC_CTX_S *pstCtx     = reinterpret_cast<Bedrock_VENC_CTX_S *>(pArgs);
     void            *pData      = RK_NULL;
     RK_S32           s32Ret     = RK_SUCCESS;
@@ -187,7 +187,7 @@ void* venc_get_stream(void *pArgs) {
     return RK_NULL;
 }
 
-void* venc_send_frame(void *pArgs) {
+static void* venc_send_frame(void *pArgs) {
     Bedrock_VENC_CTX_S     *pstCtx        = reinterpret_cast<Bedrock_VENC_CTX_S *>(pArgs);
     RK_S32               s32Ret         = RK_SUCCESS;
     RK_U8               *pVirAddr       = RK_NULL;
@@ -384,13 +384,116 @@ RK_S32 unit_test_mpi_venc(Bedrock_VENC_CTX_S *ctx) {
     return RK_SUCCESS;
 }
 static void setting_default_argc(Bedrock_VENC_CTX_S *ctx) {
+    ctx->s32LoopCount    = 1;
+    ctx->u32StreamBufCnt = 8;
+    ctx->u32ChNum        = 1;
+    ctx->u32SrcPixFormat = RK_FMT_YUV420SP;
+    ctx->u32DstCodec     = RK_VIDEO_ID_AVC;
+    
     ctx->srcFileUri = INPUT_FILE;
     ctx->dstFilePath = OUTPUT_FILE;
     ctx->u32SrcWidth = WIDTH;
     ctx->u32SrcHeight = HEIGHT;
     ctx->s32LoopCount = 100;
 }
+/*** 
+ * @description: 
+ * @param {Bedrock_VENC_CTX_S} *ctx
+ * @return {*}
+ * @author: Bedrock
+ * @brief: 初始化mpi_enc相关参数
+ * @use: 
+ */
+RK_S32 mpi_enc_init(Bedrock_VENC_CTX_S *ctx)
+{
+    RK_S32 s32Ret = RK_SUCCESS;
+    RK_U32 u32Ch = 0;
+    VENC_CHN_ATTR_S stAttr;
+    VENC_RECV_PIC_PARAM_S   stRecvParam;
+    VENC_RC_PARAM_S         stRcParam;
+    MB_POOL_CONFIG_S        stMbPoolCfg;
+ 
+    /*文件参数解析(未实现)*/
+    s32Ret = init_argc_for_cfg(ctx);
+    setting_default_argc(ctx);
+    mpi_venc_test_show_options(ctx);
+    /*开始进行初始化参数设置*/
+    s32Ret = RK_MPI_SYS_Init();
+    if (s32Ret != RK_SUCCESS) {
+        return s32Ret;
+    }
 
+    memset(&stAttr, 0, sizeof(VENC_CHN_ATTR_S));
+    memset(&stRecvParam, 0, sizeof(VENC_RECV_PIC_PARAM_S));
+    memset(&stRcParam, 0, sizeof(VENC_RC_PARAM_S));
+    /*申请内存*/
+    if (ctx->u32BufferSize <= 0) {
+        PIC_BUF_ATTR_S stPicBufAttr;
+        MB_PIC_CAL_S stMbPicCalResult;
+
+        stPicBufAttr.u32Width = ctx->u32SrcWidth;
+        stPicBufAttr.u32Height = ctx->u32SrcHeight;
+        stPicBufAttr.enPixelFormat = (PIXEL_FORMAT_E)ctx->u32SrcPixFormat;
+        stPicBufAttr.enCompMode = COMPRESS_MODE_NONE;
+        s32Ret = RK_MPI_CAL_COMM_GetPicBufferSize(&stPicBufAttr, &stMbPicCalResult);
+        if (s32Ret != RK_SUCCESS) {
+            RK_LOGE("get picture buffer size failed. err 0x%x", s32Ret);
+            return s32Ret;
+        }
+        ctx->u32BufferSize = stMbPicCalResult.u32MBSize;
+        RK_LOGD("calc picture size: %d", ctx->u32BufferSize);
+    }
+    if (ctx->u32BufferSize > 32 * 1024 * 1024) {
+        RK_LOGE("too large picture size: %d", ctx->u32BufferSize);
+        return RK_FAILURE;
+    }
+
+    for (u32Ch = 0; u32Ch < ctx->u32ChNum; u32Ch++) {
+        if (ctx->u32ChNum >= 1) {
+            ctx->u32ChnIndex = u32Ch;
+        }
+    }
+    /*创建编码通道*/
+    stAttr.stVencAttr.enType = (RK_CODEC_ID_E)ctx->u32DstCodec;
+    stAttr.stVencAttr.u32Profile = H264E_PROFILE_HIGH;
+    stAttr.stVencAttr.enPixelFormat = (PIXEL_FORMAT_E)ctx->u32SrcPixFormat;
+    stAttr.stVencAttr.u32PicWidth = ctx->u32SrcWidth;
+    stAttr.stVencAttr.u32PicHeight = ctx->u32SrcHeight;
+
+    if (ctx->u32srcVirWidth <= 0) {
+        ctx->u32srcVirWidth = ctx->u32SrcWidth;
+    }
+    stAttr.stVencAttr.u32VirWidth = ctx->u32srcVirWidth;
+
+    if (ctx->u32srcVirHeight <= 0) {
+        ctx->u32srcVirHeight = ctx->u32SrcHeight;
+    }
+    stAttr.stVencAttr.u32VirHeight = ctx->u32srcVirHeight;
+    stAttr.stVencAttr.u32StreamBufCnt = ctx->u32StreamBufCnt;
+    stAttr.stVencAttr.u32BufSize = ctx->u32BufferSize;
+
+    RK_MPI_VENC_CreateChn(u32Ch, &stAttr);
+    /*启动图象传输*/
+    RK_MPI_VENC_StartRecvFrame(u32Ch, &stRecvParam);
+    /*创建内存缓存池 互斥*/
+    memset(&stMbPoolCfg, 0, sizeof(MB_POOL_CONFIG_S));
+    stMbPoolCfg.u64MBSize = ctx->u32BufferSize;
+    stMbPoolCfg.u32MBCnt  = 10;
+    stMbPoolCfg.enAllocType = MB_ALLOC_TYPE_DMA;
+
+    ctx->vencPool = RK_MPI_MB_CreatePool(&stMbPoolCfg);
+    
+    return RK_SUCCESS;
+}
+RK_S32 mpi_enc_remove()
+{
+    RK_S32 s32Ret = RK_SUCCESS;
+    s32Ret = RK_MPI_SYS_Exit();
+    if (s32Ret != RK_SUCCESS) {
+        return s32Ret;
+    }
+    return s32Ret;
+}
 /*** 
  * @description: 
  * @param {int} argc

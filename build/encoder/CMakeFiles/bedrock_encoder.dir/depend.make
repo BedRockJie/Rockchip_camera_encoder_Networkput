@@ -3,6 +3,7 @@
 
 encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/inc/argparse.h
 encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/inc/bedrock_enc.h
+encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/inc/filecfg.h
 encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../encoder/inc/mpi_test_utils.h
 encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../lib/rockit/include/rk_comm_mb.h
 encoder/CMakeFiles/bedrock_encoder.dir/bedrock_mpi_enc.cpp.o: ../lib/rockit/include/rk_comm_rc.h

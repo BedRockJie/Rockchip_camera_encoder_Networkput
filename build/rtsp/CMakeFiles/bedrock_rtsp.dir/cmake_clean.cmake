@@ -1,0 +1,40 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/bedrock_rtsp.dir/bedrock_rtsp.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/Acceptor.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/BufferReader.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/BufferWriter.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/EpollTaskScheduler.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/EventLoop.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/Logger.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/MemoryManager.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/NetInterface.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/Pipe.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/SelectTaskScheduler.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/SocketUtil.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/TaskScheduler.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/TcpConnection.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/TcpServer.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/TcpSocket.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/Timer.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/net/Timestamp.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/AACSource.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/DigestAuthentication.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/G711ASource.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/H264Parser.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/H264Source.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/H265Source.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/MediaSession.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/RtpConnection.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/RtspConnection.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/RtspMessage.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/RtspPusher.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/RtspServer.cpp.o"
+  "CMakeFiles/bedrock_rtsp.dir/src/xop/VP8Source.cpp.o"
+  "libbedrock_rtsp.a"
+  "libbedrock_rtsp.pdb"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/bedrock_rtsp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

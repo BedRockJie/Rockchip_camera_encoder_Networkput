@@ -13,6 +13,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.16.3/CMakeSystem.cmake"
   "../encoder/CMakeLists.txt"
   "../encoder/src/CMakeLists.txt"
+  "../rtsp/CMakeLists.txt"
+  "../test/CMakeLists.txt"
   "/usr/share/cmake-3.16/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.16/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake"
@@ -45,6 +47,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "encoder/CMakeFiles/CMakeDirectoryInformation.cmake"
   "encoder/src/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "rtsp/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "test/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -52,4 +56,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/Bedrock_encoder.dir/DependInfo.cmake"
   "CMakeFiles/bedrock_lib.dir/DependInfo.cmake"
   "encoder/CMakeFiles/bedrock_encoder.dir/DependInfo.cmake"
+  "rtsp/CMakeFiles/bedrock_rtsp.dir/DependInfo.cmake"
+  "test/CMakeFiles/bedrock_test.dir/DependInfo.cmake"
   )

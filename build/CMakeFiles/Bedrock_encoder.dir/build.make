@@ -81,6 +81,7 @@ Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/main.cpp.o
 Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/build.make
 Bedrock_encoder: libbedrock_lib.so
 Bedrock_encoder: encoder/libbedrock_encoder.a
+Bedrock_encoder: rtsp/libbedrock_rtsp.a
 Bedrock_encoder: ../encoder/../lib/rockit/lib/librockit.so
 Bedrock_encoder: ../encoder/../lib/libconfig/lib/libconfig.so
 Bedrock_encoder: CMakeFiles/Bedrock_encoder.dir/link.txt

@@ -15,6 +15,7 @@ include_directories(${ROCKIT_INCLUDE})
 
 add_subdirectory(encoder)
 add_subdirectory(rtsp)
+add_subdirectory(test)
 
 set(LIB_SOURCE
     control/bedrock_control.c

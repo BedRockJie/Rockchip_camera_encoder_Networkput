@@ -195,6 +195,32 @@ bedrock_encoder/fast:
 	$(MAKE) -f encoder/CMakeFiles/bedrock_encoder.dir/build.make encoder/CMakeFiles/bedrock_encoder.dir/build
 .PHONY : bedrock_encoder/fast
 
+#=============================================================================
+# Target rules for targets named bedrock_rtsp
+
+# Build rule for target.
+bedrock_rtsp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bedrock_rtsp
+.PHONY : bedrock_rtsp
+
+# fast build rule for target.
+bedrock_rtsp/fast:
+	$(MAKE) -f rtsp/CMakeFiles/bedrock_rtsp.dir/build.make rtsp/CMakeFiles/bedrock_rtsp.dir/build
+.PHONY : bedrock_rtsp/fast
+
+#=============================================================================
+# Target rules for targets named bedrock_test
+
+# Build rule for target.
+bedrock_test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 bedrock_test
+.PHONY : bedrock_test
+
+# fast build rule for target.
+bedrock_test/fast:
+	$(MAKE) -f test/CMakeFiles/bedrock_test.dir/build.make test/CMakeFiles/bedrock_test.dir/build
+.PHONY : bedrock_test/fast
+
 control/bedrock_control.o: control/bedrock_control.c.o
 
 .PHONY : control/bedrock_control.o
@@ -291,6 +317,8 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... bedrock_lib"
 	@echo "... bedrock_encoder"
+	@echo "... bedrock_rtsp"
+	@echo "... bedrock_test"
 	@echo "... control/bedrock_control.o"
 	@echo "... control/bedrock_control.i"
 	@echo "... control/bedrock_control.s"

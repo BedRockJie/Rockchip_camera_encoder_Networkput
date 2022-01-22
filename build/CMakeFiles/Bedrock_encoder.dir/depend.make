@@ -5,5 +5,20 @@ CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../encoder/inc/bedrock_enc.h
 CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../inc/bedrock_control.h
 CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../inc/bedrock_log.h
 CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../inc/bedrock_test.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_comm_mb.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_comm_rc.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_comm_sys.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_comm_venc.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_comm_video.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_common.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_debug.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_defines.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_errno.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_mpi_cal.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_mpi_mb.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_mpi_sys.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_mpi_venc.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../lib/rockit/include/rk_type.h
+CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../rtsp/inc/bedrock_rtsp.h
 CMakeFiles/Bedrock_encoder.dir/main.cpp.o: ../main.cpp
 
