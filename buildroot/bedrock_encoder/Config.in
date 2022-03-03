@@ -1,0 +1,4 @@
+config BR2_PACKAGE_BEDROCK_ENCODER
+        bool "Bedrock using  mpp_lib for encoder Media file"
+        help
+                This is a demo to encoder app(lib?)
