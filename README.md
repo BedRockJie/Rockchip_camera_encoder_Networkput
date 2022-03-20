@@ -21,3 +21,20 @@
 main - Bedrock_encoder
 bedrock_control debug_log_test - libbedrock_lib.so
 libbedrock_encoder.a 编码函数生成的动态库文件(test中未直接使用)
+
+
+# 依赖软件包
+注意：因为作者已经将项目软件包包含在项目中了，所以不需要在文件系统中重新编译软件包，软件包更新后可能会导致项目无法执行，作者推荐将本仓库中编译出来的动态库直接拷贝到目标板文件系统中（原因是作者没有在工程中指定安装该动态库到目标板）
+- rockit
+- libconfig
+
+# 有关test的说明
+在后面的测试中因为间隔时间较长，所以不对源码做太多修改，所以使用本地的软件包进行功能测试验证。
+```
+├── bedrock_cfgf_test.cpp libconfig库的测试test
+├── bedrock_mpi.cfg 读取的cfg文件，会被安装在/usr/bin/目录下
+├── bedrock_mpi_vi_test.cpp 采集camera并编码推流文件
+├── bedrock_test.cpp 读取本地文件并推流
+├── CMakeLists.txt
+└── debug_log_test.c 创建仓库时的文件
+```
