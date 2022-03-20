@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-13 11:47:39
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-22 16:50:33
+ * @LastEditTime: 2022-03-19 10:44:23
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/encoder/src/filecfg.cpp
  * @版权声明
@@ -15,7 +15,7 @@
 #include "bedrock_enc.h"
 
 #define CFG_CONFIG_TEST_FILE "example.cfg"
-#define CFG_DEFAULT_FILE_NAME "bedrock_mpi.cfg"
+#define CFG_DEFAULT_FILE_NAME "/usr/bin/bedrock_mpi.cfg"
 int init_argc_for_cfg(Bedrock_VENC_CTX_S *p, const char *cfg_filename)
 {
     config_t cfg;

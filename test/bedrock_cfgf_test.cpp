@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-21 19:51:51
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-01-22 17:27:07
+ * @LastEditTime: 2022-03-19 10:51:21
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/test/bedrock_cfgf_test.cpp
  * @版权声明
@@ -37,6 +37,13 @@ int main(int argc, char const *argv[])
     RK_S32 ret = RK_SUCCESS;
     Bedrock_VENC_CTX_S ctx;
     const char *file = NULL;
+    if (argc == 1) {
+        printf("Using defaule cfg~!\n");
+    }
+    else if (argc == 2) {
+        printf("Please Input file name \n");
+        printf("bedrock_cfg_test [-c] filename \n");
+    }
     memset(&ctx, 0, sizeof(Bedrock_VENC_CTX_S));
     ret = init_argc_for_cfg(&ctx, file);
     mpi_venc_test_show_options(&ctx);
