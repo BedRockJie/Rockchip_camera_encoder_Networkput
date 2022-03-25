@@ -58,21 +58,41 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test")
     file(RPATH_CHECK
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/bedrock_fcg_test")
-  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test" AND
-     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/bedrock_cfg_test")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test")
     file(RPATH_CHANGE
-         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test"
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test"
          OLD_RPATH "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
-      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_fcg_test")
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_cfg_test")
+    endif()
+  endif()
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test")
+    file(RPATH_CHECK
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test"
+         RPATH "")
+  endif()
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build/test/bedrock_mpi_vi_test")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test")
+    file(RPATH_CHANGE
+         FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test"
+         OLD_RPATH "/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/build:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/rockit/lib:/home/jie/workspace/rk356x_nova/rk356x_linux_release_20211019/external/bedrock_encoder/encoder/../lib/libconfig/lib:"
+         NEW_RPATH "")
+    if(CMAKE_INSTALL_DO_STRIP)
+      execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/bedrock_mpi_vi_test")
     endif()
   endif()
 endif()
