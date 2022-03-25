@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-01-01 14:42:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-03-20 10:41:46
+ * @LastEditTime: 2022-03-25 21:18:01
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/test/bedrock_test.cpp
  * @版权声明
@@ -66,7 +66,7 @@ void* venc_get_stream(void *pArgs) {
     RK_S32           s32StreamCnt = 0;
     VENC_STREAM_S    stFrame;
     std::string suffix = "live";
-	std::string ip = "172.17.3.90";
+	std::string ip = "172.17.3.108";
 	std::string port = "554";
 	std::string rtsp_url = "rtsp://" + ip + ":" + port + "/" + suffix;
     	
