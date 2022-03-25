@@ -61,7 +61,6 @@
     },
     "C_Cpp.errorSquiggles": "Disabled",
     "C_Cpp.clang_format_style": "{ BasedOnStyle: Chromium, IndentWidth: 4}",
-    "editor.fontSize": 16,
     // 头部注释
 "fileheader.customMade": {
   // 头部注释默认字段

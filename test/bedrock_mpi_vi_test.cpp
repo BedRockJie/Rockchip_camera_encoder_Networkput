@@ -2,7 +2,7 @@
  * @Author: Bedrock
  * @Date: 2022-03-20 09:37:56
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-03-20 10:43:08
+ * @LastEditTime: 2022-03-25 21:18:10
  * @Description: 使用video0输入编码推流的test
  * @FilePath: /bedrock_encoder/test/bedrock_mpi_vi_test.cpp
  * @版权声明
@@ -113,7 +113,7 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
     RK_U32 u32DstCount = ((ctx->enMode == TEST_VI_MODE_BIND_VENC_MULTI) ? 2 : 1);
     /*Init xop AVFream*/
     std::string suffix = "live";
-	std::string ip = "172.17.3.90";
+	std::string ip = "172.17.3.108";
 	std::string port = "554";
 	std::string rtsp_url = "rtsp://" + ip + ":" + port + "/" + suffix;
     	
