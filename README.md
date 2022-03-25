@@ -1,3 +1,14 @@
+<!--
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Bedrock
+ * @Date: 2022-03-20 12:00:00
+ * @LastEditors: Bedrock
+ * @LastEditTime: 2022-03-25 22:56:51
+ * @Author: Bedrock
+ * @FilePath: /bedrock_encoder/README.md
+ * 版权声明
+-->
 # RK3566编码网络推流软件包
 使用rockchip硬件mpp进行编码，使用软件已经封装好的一层rockit接口来调用mpp进行编码。
 
@@ -38,3 +49,5 @@ libbedrock_encoder.a 编码函数生成的动态库文件(test中未直接使用
 ├── CMakeLists.txt
 └── debug_log_test.c 创建仓库时的文件
 ```
+
+v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat=NV12  --stream-mmap=3 --stream-skip=3 --stream-to=rk628.yuv --stream-count=1 --stream-poll

@@ -1,12 +1,15 @@
 /*** 
- * @Author: Bedrock
- * @Date: 2022-03-20 09:37:56
+ * @Description: 
+ * @Version: 2.0
+ * @Autor: Bedrock
+ * @Date: 2022-03-25 22:32:34
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-03-25 21:18:10
- * @Description: 使用video0输入编码推流的test
+ * @LastEditTime: 2022-03-26 00:05:58
+ * @Author: Bedrock
  * @FilePath: /bedrock_encoder/test/bedrock_mpi_vi_test.cpp
  * @版权声明
  */
+
 #include <stdio.h>
 #include <sys/poll.h>
 #include <errno.h>
@@ -14,10 +17,13 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <pthread.h>
-#include <iostream>
-#include "rk_mpi_vi.h"
 #include "mpi_test_utils.h"
-#include "bedrock_enc.h"
+#include "rk_defines.h"
+#include "rk_debug.h"
+#include "rk_mpi_vi.h"
+#include "rk_mpi_mb.h"
+#include "rk_mpi_sys.h"
+#include "rk_mpi_venc.h"
 #include "argparse.h"
 #include "xop/RtspServer.h"
 #include "net/Timer.h"
@@ -111,9 +117,9 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
     RK_S32 s32Ret = RK_FAILURE;
     RK_U32 i;
     RK_U32 u32DstCount = ((ctx->enMode == TEST_VI_MODE_BIND_VENC_MULTI) ? 2 : 1);
-    /*Init xop AVFream*/
+
     std::string suffix = "live";
-	std::string ip = "172.17.3.108";
+	std::string ip = "192.168.0.110";
 	std::string port = "554";
 	std::string rtsp_url = "rtsp://" + ip + ":" + port + "/" + suffix;
     	
@@ -138,7 +144,6 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
 	xop::MediaSessionId session_id = server->AddSession(session);
 	
 	std::cout << "Play URL: " << rtsp_url << std::endl;
-    /*xop AVFream Init done*/
 
     /* vi init */
     // 0. get dev config status
@@ -231,7 +236,6 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
             s32Ret = RK_MPI_VENC_GetStream(ctx->stVencCfg[i].s32ChnId, &ctx->stFrame[i], -1);
             if (s32Ret == RK_SUCCESS) {
                 if (ctx->stVencCfg[i].bOutDebugCfg) {
-                    /*Bedrock Start get enc Buffer*/
                     pData = RK_MPI_MB_Handle2VirAddr(ctx->stFrame[i].pstPack->pMbBlk);
                     xop::AVFrame videoFrame = {0};
                     videoFrame.type = 0; 
@@ -445,12 +449,12 @@ int main(int argc, const char **argv) {
     ctx->devId = 0;
     ctx->pipeId = ctx->devId;
     ctx->channelId = 1;
-    ctx->loopCountSet = 100;
+    ctx->loopCountSet = 1000;
     ctx->enMode = TEST_VI_MODE_BIND_VENC;
     ctx->stChnAttr.stIspOpt.u32BufCount = 3;
     ctx->stChnAttr.stIspOpt.enMemoryType = VI_V4L2_MEMORY_TYPE_DMABUF;
     ctx->stChnAttr.u32Depth = 2;
-    ctx->aEntityName = "/dev/video0"; 
+    ctx->aEntityName = "/dev/video0";
     ctx->stChnAttr.enPixelFormat = RK_FMT_YUV420SP;
     ctx->stChnAttr.stFrameRate.s32SrcFrameRate = -1;
     ctx->stChnAttr.stFrameRate.s32DstFrameRate = -1;
