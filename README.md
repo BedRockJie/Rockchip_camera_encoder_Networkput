@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-03-20 12:00:00
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-03-25 22:56:51
+ * @LastEditTime: 2022-03-26 00:16:55
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/README.md
  * 版权声明
@@ -51,3 +51,5 @@ libbedrock_encoder.a 编码函数生成的动态库文件(test中未直接使用
 ```
 
 v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat=NV12  --stream-mmap=3 --stream-skip=3 --stream-to=rk628.yuv --stream-count=1 --stream-poll
+
+media-ctl -d /dev/media0 --set-v4l2 '"rkisp-isp-subdev":2[fmt:UYVY8_2X8/1920x1080]'

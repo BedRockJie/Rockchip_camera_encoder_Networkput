@@ -4,7 +4,7 @@
  * @Autor: Bedrock
  * @Date: 2022-03-25 22:32:34
  * @LastEditors: Bedrock
- * @LastEditTime: 2022-03-26 00:05:58
+ * @LastEditTime: 2022-03-26 21:56:22
  * @Author: Bedrock
  * @FilePath: /bedrock_encoder/test/bedrock_mpi_vi_test.cpp
  * @版权声明
@@ -17,13 +17,10 @@
 #include <cstdlib>
 #include <unistd.h>
 #include <pthread.h>
-#include "mpi_test_utils.h"
-#include "rk_defines.h"
-#include "rk_debug.h"
+#include <iostream>
 #include "rk_mpi_vi.h"
-#include "rk_mpi_mb.h"
-#include "rk_mpi_sys.h"
-#include "rk_mpi_venc.h"
+#include "mpi_test_utils.h"
+#include "bedrock_enc.h"
 #include "argparse.h"
 #include "xop/RtspServer.h"
 #include "net/Timer.h"
@@ -117,7 +114,7 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
     RK_S32 s32Ret = RK_FAILURE;
     RK_U32 i;
     RK_U32 u32DstCount = ((ctx->enMode == TEST_VI_MODE_BIND_VENC_MULTI) ? 2 : 1);
-
+    
     std::string suffix = "live";
 	std::string ip = "192.168.0.110";
 	std::string port = "554";
@@ -132,6 +129,7 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
 	}
 	xop::MediaSession *session = xop::MediaSession::CreateNew("live"); 
 	session->AddSource(xop::channel_0, xop::H264Source::CreateNew()); 
+    
 	//session->StartMulticast(); 
 	session->AddNotifyConnectedCallback([] (xop::MediaSessionId sessionId, std::string peer_ip, uint16_t peer_port){
 		printf("RTSP client connect, ip=%s, port=%hu \n", peer_ip.c_str(), peer_port);
@@ -240,6 +238,7 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
                     xop::AVFrame videoFrame = {0};
                     videoFrame.type = 0; 
                     videoFrame.size = ctx->stFrame[i].pstPack->u32Len;
+                    //printf("size is %d\n",videoFrame.size);
                     videoFrame.timestamp = xop::H264Source::GetTimestamp();
                     videoFrame.buffer.reset(new uint8_t[videoFrame.size]); 
                     memcpy(videoFrame.buffer.get(), pData, videoFrame.size);
@@ -247,7 +246,7 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
                     fwrite(pData, 1, ctx->stFrame[i].pstPack->u32Len, ctx->stVencCfg[i].fp);
                     fflush(ctx->stVencCfg[i].fp);
                 }
-                RK_LOGE("chn:%d, loopCount:%d wd:%d\n", i, loopCount, ctx->stFrame[i].pstPack->u32Len);
+                //RK_LOGE("chn:%d, loopCount:%d wd:%d\n", i, loopCount, ctx->stFrame[i].pstPack->u32Len);
                 s32Ret = RK_MPI_VENC_ReleaseStream(ctx->stVencCfg[i].s32ChnId, &ctx->stFrame[i]);
                 if (s32Ret != RK_SUCCESS) {
                     RK_LOGE("RK_MPI_VENC_ReleaseStream fail %x", s32Ret);
@@ -257,7 +256,8 @@ static RK_S32 test_vi_bind_venc_loop(TEST_VI_CTX_S *ctx) {
                 RK_LOGE("RK_MPI_VI_GetChnFrame fail %x", s32Ret);
             }
         }
-        usleep(10*1000);
+        xop::Timer::Sleep(40);
+        //usleep(10*1000);
     }
 
     for (i = 0; i < u32DstCount; i++) {
