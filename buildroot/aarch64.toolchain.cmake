@@ -1,13 +1,17 @@
 set(CMAKE_SYSTEM_NAME Linux)
 set(CMAKE_SYSTEM_PROCESSOR aarch64)
 
+if(DEFINED ENV{aarch64_TOOLCHAIN_ROOT_PATH})
+    file(TO_CMAKE_PATH $ENV{aarch64_TOOLCHAIN_ROOT_PATH} TOOLCHAIN_ROOT_PATH)
+else()
+    message(FATAL_ERROR "aarch64_TOOLCHAIN_ROOT_PATH env must be defined")
+endif()
 
 
+set(CMAKE_C_COMPILER "${TOOLCHAIN_ROOT_PATH}/bin/aarch64-buildroot-linux-gnu-gcc")
+set(CMAKE_CXX_COMPILER "${TOOLCHAIN_ROOT_PATH}/bin/aarch64-buildroot-linux-gnu-g++")
 
-set(CMAKE_C_COMPILER "aarch64-buildroot-linux-gnu-gcc")
-set(CMAKE_CXX_COMPILER "arch64-buildroot-linux-gnu-g++")
-
-
+set(CMAKE_TOOLCHAIN_FILE "${TOOLCHAIN_ROOT_PATH}")
 
 set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
 set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)

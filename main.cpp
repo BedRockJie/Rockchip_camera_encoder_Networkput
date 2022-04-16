@@ -25,6 +25,7 @@
 */
 int main(int argc, char const *argv[])
 {
+    /*初始化函数*/
     enable_minilog = 0;
     bedrock_app_log_level = LOG_ERROR;
     dlog_level_test();
