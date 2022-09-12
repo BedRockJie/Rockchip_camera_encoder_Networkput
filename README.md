@@ -9,7 +9,7 @@
  * @FilePath: /bedrock_encoder/README.md
  * 版权声明
 -->
-# RK3566编码网络推流软件包
+# RK356*编码网络推流软件包
 使用rockchip硬件mpp进行编码，使用软件已经封装好的一层rockit接口来调用mpp进行编码。
 
 
@@ -49,7 +49,10 @@ libbedrock_encoder.a 编码函数生成的动态库文件(test中未直接使用
 ├── CMakeLists.txt
 └── debug_log_test.c 创建仓库时的文件
 ```
-
+# RK平台的命令行测试工具
 v4l2-ctl -d /dev/video0 --set-fmt-video=width=1920,height=1080,pixelformat=NV12  --stream-mmap=3 --stream-skip=3 --stream-to=rk628.yuv --stream-count=1 --stream-poll
 
 media-ctl -d /dev/media0 --set-v4l2 '"rkisp-isp-subdev":2[fmt:UYVY8_2X8/1920x1080]'
+
+# 启动测试方法
+本项目编译出了许多个文件，其中详情见test说明。
